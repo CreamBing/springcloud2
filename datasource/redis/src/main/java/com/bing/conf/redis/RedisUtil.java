@@ -1,4 +1,4 @@
-package com.bing.conf;
+package com.bing.conf.redis;
 
 
 import org.springframework.data.redis.core.BoundHashOperations;

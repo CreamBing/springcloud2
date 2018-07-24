@@ -2,17 +2,21 @@ server:
   port: 9091
 spring:
   application:
-    name: test-demo
+    name: test
   cloud:
-    zookeeper:
-      enabled: true  # true:开启zookeeper外部化配置, false:读取本地配置;
-      connect-string: 192.168.10.128:2181,192.168.10.128:3181,192.168.10.128:4181
+    consul:
+      host: 192.168.10.180
       config:
-              enabled: true
-              root: springboot_demo/datasource_demo
-              watcher:
-                enabled: true
+        format: YAML
+        enabled: true
+        data-key: configuration
+        prefix: config
+        default-context: ${spring.application.name}
+      port: 18500
       discovery:
-              instanceHost: 127.0.0.1
-              instancePort: ${server.port}
-              root: zbServices
+        enabled: true
+        service-name: test-datasource
+        health-check-path: /actuator/health
+        health-check-interval: 10s
+        health-check-url: http://192.168.14.32:9091/actuator/health
+        tags: dev

@@ -32,12 +32,6 @@
         </dependency>
         <!--end 内部模块-->
 
-        <!--start zookeeper 服务发现-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-zookeeper-discovery</artifactId>
-        </dependency>
-        <!--end zookeeper 服务发现-->
 
         <!--start springboot-->
         <dependency>
@@ -63,6 +57,15 @@
             </exclusions>
         </dependency>
         <!--end spring web controller-->
+
+        <!-- some tools -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.6</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- some tools -->
 
     </dependencies>
 

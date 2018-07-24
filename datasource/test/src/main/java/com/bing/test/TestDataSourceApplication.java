@@ -1,8 +1,9 @@
-package com.bing;
+package com.bing.test;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
  * <p>Title: TestDataSourceApplication</p>
@@ -14,6 +15,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  */
 @SpringBootApplication
 @EnableDiscoveryClient
+@ComponentScan(basePackages={"com.bing.conf.*","com.bing.test.*"})
 public class TestDataSourceApplication {
     public static void main(String[] args) {
         SpringApplication.run(TestDataSourceApplication.class, args);

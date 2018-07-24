@@ -23,27 +23,7 @@
 	</properties>
 
 	<dependencies>
-		<!--start spingcloud-zookeeper 从zookeeper获取配置信息-->
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-zookeeper-config</artifactId>
-		</dependency>
-			<!-- 动态获取配置-->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-            <exclusions>
-                <exclusion>
-                    <artifactId>spring-boot-starter</artifactId>
-                    <groupId>org.springframework.boot</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>spring-boot-autoconfigure</artifactId>
-                    <groupId>org.springframework.boot</groupId>
-                </exclusion>
-            </exclusions>
-		</dependency>
-		<!--start spingcloud-zookeeper 从zookeeper获取配置信息-->
+
 
         <!--start springboot redis-->
         <dependency>

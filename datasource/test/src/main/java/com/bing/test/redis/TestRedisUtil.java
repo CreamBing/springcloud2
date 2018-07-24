@@ -1,6 +1,6 @@
-package com.bing.redis_demo;
+package com.bing.test.redis;
 
-import com.bing.conf.RedisUtil;
+import com.bing.conf.redis.RedisUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
