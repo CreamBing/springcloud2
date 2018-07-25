@@ -1,13 +1,15 @@
-package com.bing.test.redis;
+package com.bing.tests.redis;
 
 import com.bing.test.TestDataSourceApplication;
+import com.bing.test.redis.TestRedisUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+
 /**
- * <p>Title: TestConsulConfig</p>
+ * <p>Title: TestRedis</p>
  * <p>Description: </p>
  *
  * @author bing
@@ -16,13 +18,18 @@ import org.springframework.test.context.junit4.SpringRunner;
  */
 @SpringBootTest(classes = TestDataSourceApplication.class,webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @RunWith(SpringRunner.class)
-public class TestConsulConfig {
+public class TestRedis {
 
     @Autowired
-    TestConsulConfigValue testConsulConfig;
+    TestRedisUtil testRedisUtil;
 
     @Test
-    public void getValue(){
-        System.out.println(testConsulConfig.getDatabase());
+    public void testSetTestKey(){
+        testRedisUtil.setTestKey();
+    }
+
+    @Test
+    public void testGetTestKey(){
+        System.out.println(testRedisUtil.getTestKey());
     }
 }

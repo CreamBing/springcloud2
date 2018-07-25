@@ -25,9 +25,17 @@
     <dependencies>
 
         <!--start 内部模块-->
+        <!--验证redis 模块-->
         <dependency>
             <groupId>com.bing</groupId>
             <artifactId>redis</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <!--验证jpa模块-->
+        <dependency>
+            <groupId>com.bing</groupId>
+            <artifactId>jpa</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <!--end 内部模块-->

@@ -15,7 +15,7 @@ import org.springframework.context.annotation.ComponentScan;
  */
 @SpringBootApplication
 @EnableDiscoveryClient
-@ComponentScan(basePackages={"com.bing.conf.*","com.bing.test.*"})
+@ComponentScan(basePackages={"com.bing.conf.*", "com.bing.test.*"})
 public class TestDataSourceApplication {
     public static void main(String[] args) {
         SpringApplication.run(TestDataSourceApplication.class, args);

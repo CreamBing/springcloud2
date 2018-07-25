@@ -18,5 +18,5 @@ spring:
         service-name: test-datasource
         health-check-path: /actuator/health
         health-check-interval: 10s
-        health-check-url: http://192.168.14.32:9091/actuator/health
+        health-check-url: http://192.168.14.32:${server.port}${spring.cloud.consul.discovery.health-check-path}
         tags: dev

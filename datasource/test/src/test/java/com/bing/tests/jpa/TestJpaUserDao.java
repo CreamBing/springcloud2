@@ -1,6 +1,8 @@
-package com.bing.test.redis;
+package com.bing.tests.jpa;
 
 import com.bing.test.TestDataSourceApplication;
+import com.bing.test.jpa.dao.UserRepository;
+import com.bing.test.jpa.entity.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 /**
- * <p>Title: TestRedis</p>
+ * <p>Title: TestJpaUserDao</p>
  * <p>Description: </p>
  *
  * @author bing
@@ -17,18 +19,15 @@ import org.springframework.test.context.junit4.SpringRunner;
  */
 @SpringBootTest(classes = TestDataSourceApplication.class,webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @RunWith(SpringRunner.class)
-public class TestRedis {
+public class TestJpaUserDao {
 
     @Autowired
-    TestRedisUtil testRedisUtil;
+    UserRepository userRepository;
 
     @Test
-    public void testSetTestKey(){
-        testRedisUtil.setTestKey();
-    }
-
-    @Test
-    public void testGetTestKey(){
-        System.out.println(testRedisUtil.getTestKey());
+    public void saveUser(){
+        User user = new User();
+        user.setName("zb");
+        userRepository.save(user);
     }
 }
