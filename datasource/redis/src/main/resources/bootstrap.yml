@@ -1,12 +1,8 @@
-#server:
-#  port: 9096
-#spring:
-#  application:
-#    name: redis
-#  cloud:
-#    consul:
-#      host: 192.168.10.180
-#      config:
-#        format: YAML
-#        enabled: true
-#      port: 8500
+#redis相关配置,目前这些配置在consul集群上
+#redis模块
+spring:
+  redis:
+    database: 5
+    host: 192.168.14.120
+    port: 16379
+    timeout: 6000

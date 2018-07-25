@@ -19,7 +19,7 @@
     <modules>
         <module>redis</module>
         <module>test</module>
-        <!--<module>jdbc</module>-->
+        <module>jdbc</module>
         <module>jpa</module>
     </modules>
 

@@ -33,9 +33,16 @@
         </dependency>
 
         <!--验证jpa模块-->
-        <dependency>
+        <!--<dependency>
             <groupId>com.bing</groupId>
             <artifactId>jpa</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>-->
+
+        <!--验证jdbc模块-->
+        <dependency>
+            <groupId>com.bing</groupId>
+            <artifactId>jdbc</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <!--end 内部模块-->

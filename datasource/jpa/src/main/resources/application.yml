@@ -1,0 +1,13 @@
+#jpa相关配置,目前这些配置在consul集群上
+#jpa模块
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.14.120:13306/springcloud2?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 12345678
+jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate:
+    #表示不会创建表,只会更新数据create:会创建表
+      ddl-auto: update

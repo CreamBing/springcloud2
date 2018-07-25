@@ -16,6 +16,10 @@ import javax.persistence.*;
 @Table(name = "user")
 @Data
 public class User {
+    /**
+     * strategy = GenerationType.IDENTITY
+     * 表示采用数据库自增长
+     */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
