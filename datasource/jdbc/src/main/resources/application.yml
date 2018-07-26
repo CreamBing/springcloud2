@@ -1,7 +1,8 @@
 #jdbc相关配置,目前这些配置在consul集群上
 #jdbc模块
+spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.14.120:13306/springcloud2?useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://192.168.14.120:13306/springcloud2?useUnicode=true&characterEncoding=utf-8&useSSL=true
     username: root
     password: 12345678
