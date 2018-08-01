@@ -1,0 +1,6 @@
+#kafka需要配置
+spring:
+    kafka:
+      consumer:
+        bootstrap-servers: 192.168.30.200:19192,192.168.30.200:19193,192.168.30.200:19194
+        group-id: test

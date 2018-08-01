@@ -21,6 +21,7 @@
         <module>test</module>
         <module>jdbc</module>
         <module>jpa</module>
+        <module>kafka</module>
     </modules>
 
     <properties>
